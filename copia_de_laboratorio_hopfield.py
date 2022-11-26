@@ -6,6 +6,7 @@ from PIL import Image
 import os
 import re
 
+#comentario de prueba de brunch
 """# **Convierte una matriz x en vector**"""
 
 def mat2vec(x):
