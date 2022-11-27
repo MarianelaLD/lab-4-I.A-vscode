@@ -1,3 +1,4 @@
+from doctest import OutputChecker
 import numpy as np
 import neurolab as nl
 
@@ -19,8 +20,6 @@ def mat2vec(x):
             tmp1[c] = x[i,j]
             c +=1
     return tmp1
-
-def w_peso (x):
   
 
 """
@@ -142,11 +141,17 @@ print(test.shape)
 output_test = net.sim(test)
 
 for i in range(len(target)):
-  print((output_target[i] == target[i]).all(), 'Sim. steps',len(net.layers[0].outs))
+  for j in range (len (target)):
+    print((output_target[i] == target[i]).all(), 'Sim. steps',len(net.layers[0].outs))
+    after_im = output [i].reshape (oshape)
+    after_img = array2img (after_im, outFile = 'salida_training' + str (i + 1) + '.jpg')
+    #after_img.show()
 
 for i in range(len(test)):
-  print((output_test[i] == test[i]).all(), 'Sim. steps',len(net.layers[0].outs))
-
-
+  for j in range (len (target)):
+    print((output_test[i] == test[i]).all(), 'Sim. steps',len(net.layers[0].outs))
+    after_im = output_test [i]. reshape (oshape)
+    after_img = array2img (after_im, outFile = 'salida_testing' + str (i + 1) + '.jpg')
+    #after_img.show()
 
 after_img = array2img(output_test,outFile='salida.jpg')
