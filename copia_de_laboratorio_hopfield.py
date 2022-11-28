@@ -142,14 +142,14 @@ output_test = net.sim(test)
 
 for i in range(len(target)):
   for j in range (len (target)):
-    print((output_target[i] == target[i]).all(), 'Sim. steps',len(net.layers[0].outs))
+    print((output [i] == target[j]).all(), 'Sim. steps',len(net.layers[0].outs))
     after_im = output [i].reshape (oshape)
     after_img = array2img (after_im, outFile = 'salida_training' + str (i + 1) + '.jpg')
     #after_img.show()
 
 for i in range(len(test)):
   for j in range (len (target)):
-    print((output_test[i] == test[i]).all(), 'Sim. steps',len(net.layers[0].outs))
+    print((output_test[i] == test[j]).all(), 'Sim. steps',len(net.layers[0].outs))
     after_im = output_test [i]. reshape (oshape)
     after_img = array2img (after_im, outFile = 'salida_testing' + str (i + 1) + '.jpg')
     #after_img.show()
