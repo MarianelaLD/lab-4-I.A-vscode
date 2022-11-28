@@ -37,7 +37,7 @@ def array2img(data, outFile = None):
     return img
 
 current_path = os.getcwd()
-path = current_path+"/train/"
+path = current_path+"/train_pics/"
 train_paths = []
 names = []
 
