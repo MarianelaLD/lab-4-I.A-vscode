@@ -83,7 +83,7 @@ output_train = net.sim(train)
 
 for i in range(len(output_train)):
     print(names[i], ": ", (output_train[i] == train[i]).all(), 'Sim. steps', len(net.layers[0].outs))
-    array2img(output_train[i].reshape(size),outFile = "./output_pics/"+names[i]+"_train.jpg")image.png
+    array2img(output_train[i].reshape(size),outFile = "./output_pics/"+names[i]+"_train.jpg")
 output_test = net.sim(test)
 
 for i in range(len(output_train)):
